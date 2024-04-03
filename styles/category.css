@@ -6,12 +6,12 @@
     }
 
     ul {
-        margin-left: 20px;
         font-size: 18px;
         line-height: 30px;
 
         li {
             margin: 10px 0px;
+            list-style: none;
         }
     }
 }
