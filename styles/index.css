@@ -1,6 +1,7 @@
 @import "./variables.css";
 @import "./category.css";
 @import "./category-single.css";
+@import "./breakpoints.css";
 
 * {
     padding: 0px;
