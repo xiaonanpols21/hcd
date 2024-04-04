@@ -1,6 +1,8 @@
 const categoryShirts = document.querySelector("#category-shirts");
 const combineBroeken = document.querySelector(".combine-broeken");
+
 let dataPromise;
+combineBroeken.classList.add("none");
 
 // Fetch data
 async function getData() {
@@ -33,6 +35,7 @@ function showData(data) {
 
 // Get the matching broek
 async function addCombine(currentShirtId) {
+    combineBroeken.classList.remove("none");
     const data = await dataPromise;
 
     // Get current shirt id
