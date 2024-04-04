@@ -18,7 +18,7 @@ function showData(data) {
         const html = 
         `<article>
             <img src="${img}" alt="${description}">
-            <button onclick="addCombine(${item.id})">Ik wil dit aan</button>
+            <button onclick="addCombine()">Ik wil dit aan</button>
         </article>`;
 
         categoryShirts.insertAdjacentHTML("beforeend", html);
