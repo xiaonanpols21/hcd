@@ -1,0 +1,10 @@
+.combine {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h4 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
