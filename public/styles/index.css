@@ -21,6 +21,11 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* Hide */
+.combine-broeken {
+    display: none;
+}
+
 /* Target */
 #category-shirts {
     display: none;

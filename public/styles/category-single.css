@@ -1,4 +1,4 @@
-.category-single {
+.category-single, .combine-broeken {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -9,7 +9,7 @@
         object-fit: contain;
     }
 
-    h3 {
+    h3, h4 {
         font-size: 18px;
         line-height: 30px;
     }
