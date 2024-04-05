@@ -19,14 +19,6 @@
         line-height: 20px;
     }
 
-    article {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        background-color: var(--gray-200);
-        padding: 10px;
-    }
-
     button {
         padding: 10px 20px;
         margin-top: 10px;
@@ -34,6 +26,31 @@
         border: none;
         font-size: 18px;
         font-weight: bold;
+        cursor: pointer;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--gray-200);
+        padding: 10px;
+    }
+}
+
+.combine-broeken {
+    margin-top: 20px;
+
+    > button {
+        margin-top: -20px;
+        padding: 0px;
+        border: none;
+        background-color: transparent;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: left;
+        text-decoration: underline;
+        font-weight: normal;
     }
 }
 

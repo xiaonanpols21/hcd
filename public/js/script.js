@@ -42,7 +42,27 @@ async function addCombine(currentShirtId) {
     // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#41f9c46b5c1f4ed38eb30ad9b03e7306
     console.log("Current shirt Id:", currentShirtId);
 
-    console.log(data);
+    categoryShirts.innerHTML = "";
+
+    // Push selectedItem
+    // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#2293e39ee18943a4b356b29b8403f245
+    const currentItem = data.shirts.find(item => item.id === currentShirtId);
+
+    const currentData = []
+    currentData.push(currentItem);
+
+    currentData.forEach( item => {
+        const img = item.img;
+        const description = item.description;
+
+        const html = 
+        `<article>
+            <img src="${img}" alt="${description}">
+            <button onclick="addCombine(${item.id})">Ik wil dit aan</button>
+        </article>`;
+
+        categoryShirts.insertAdjacentHTML("beforeend", html);
+    });
 
     const broekenCombineData = [];
     data.broeken.forEach(item => {
@@ -50,6 +70,7 @@ async function addCombine(currentShirtId) {
             broekenCombineData.push(item);
         }
     });
+
     console.log(broekenCombineData)
     
     broekenCombineData.forEach( item => {
@@ -66,3 +87,19 @@ async function addCombine(currentShirtId) {
     });
     
 }
+
+const backBtn = document.querySelector("#backBtn");
+
+// Go back
+// Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#0e7d49695937436a90066b044ef08295
+async function fetchDataAndShowData() {
+    const data = await getData(); 
+    
+    categoryShirts.innerHTML = "";
+
+    showData(data);
+
+    console.log(data)
+    combineBroeken.classList.add("none");
+}
+backBtn.addEventListener("click", fetchDataAndShowData);
