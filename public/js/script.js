@@ -1,8 +1,9 @@
-const categoryShirts = document.querySelector("#category-shirts");
-const combineBroeken = document.querySelector(".combine-broeken");
+const categoryShirts = document.querySelector("#category-shirts div");
+const combineBroeken = document.querySelector(".combine-broeken div");
+const combineBroekenSec = document.querySelector(".combine-broeken");
 
 let dataPromise;
-combineBroeken.classList.add("none");
+combineBroekenSec.classList.add("none");
 
 // Fetch data
 async function getData() {
@@ -35,7 +36,7 @@ function showData(data) {
 
 // Get the matching broek
 async function addCombine(currentShirtId) {
-    combineBroeken.classList.remove("none");
+    combineBroekenSec.classList.remove("none");
     const data = await dataPromise;
 
     // Get current shirt id
@@ -64,6 +65,8 @@ async function addCombine(currentShirtId) {
         categoryShirts.insertAdjacentHTML("beforeend", html);
     });
 
+    combineBroeken.innerHTML = "";
+
     const broekenCombineData = [];
     data.broeken.forEach(item => {
         if (item.combine.includes(currentShirtId)) {
@@ -85,7 +88,6 @@ async function addCombine(currentShirtId) {
 
         combineBroeken.insertAdjacentHTML("beforeend", html);
     });
-    
 }
 
 const backBtn = document.querySelector("#backBtn");
@@ -94,12 +96,12 @@ const backBtn = document.querySelector("#backBtn");
 // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#0e7d49695937436a90066b044ef08295
 async function fetchDataAndShowData() {
     const data = await getData(); 
-    
+
     categoryShirts.innerHTML = "";
 
     showData(data);
 
     console.log(data)
-    combineBroeken.classList.add("none");
+    combineBroekenSec.classList.add("none");
 }
 backBtn.addEventListener("click", fetchDataAndShowData);
