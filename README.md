@@ -15,6 +15,9 @@ Het idee is dat Petra kan kiezen uit deze categorieën om mee te beginnen. Dan G
 
 ### Versie 2
 ![Versie 1](https://github.com/xiaonanpols21/hcd/blob/main-2/public/img/readme/v-1.jpg)
-Ik had de applicatie werkend gekregen waarbij De bij passende broeken bij het shirt kwamen. En als je teruggaat, dat hij dan ook daad werkelijk teruggaat om weer alle data te tonen. Dit is gedaan met JavaScript. Toen ik het ging testen op vrijdag in de eerste week, kwam ik er achter dat je geen screen reader kan gebruiken wanneer elementen zijn aangemaakt met JavaScript. 
+Hier heb ik de applicatie soort van werkend. Als je klikt op een categorie, ga je naar die kleding en dan als je op een kleding item klikt, komen de gecombineerde broeken. Ook kun je terug naar vorige. Met het testen van de screen reader kwamen er dingen naar voren om te verbeteren:
 
-Dus ik moet meer gaan werken met JavaScript op de manier van Browser Technologies. 
+- Als je hebt gekozen kom je op Webmateriaal. Is dat ook zo op mobiel? Moet ik dit veranderen?
+- Er staan nog enkelse worden in de alt van de img
+- De gekozen item niet nog een keer laten zien
+- Terug knop, is dat handig?
