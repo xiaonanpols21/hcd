@@ -1,6 +1,7 @@
 @import "./variables.css";
 @import "./category.css";
 @import "./category-single.css";
+@import "./combine.css";
 @import "./breakpoints.css";
 
 * {
@@ -20,11 +21,26 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* JS */
+.none {
+    display: none;
+}
+
 /* Target */
 #category-shirts {
     display: none;
 }
 
 #category-shirts:target {
-    display: block;
+    display: flex;
+}
+
+/* Has */
+body {
+    /* Category shirts */
+    &:has(#category-shirts:target) {
+        .category {
+            display: none;
+        }
+    } 
 }
