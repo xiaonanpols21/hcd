@@ -7,12 +7,19 @@ const combineBroekenSec = document.querySelector(".combine-broeken");
 const combineSchoenenSec = document.querySelector(".combine-schoenen");
 const combineSchoenen = document.querySelector(".combine-schoenen div");
 
+const resultsSec = document.querySelector(".results");
+const resultsDiv = document.querySelector(".results div");
+
 const backBtn = document.querySelector("#backBtn");
 
 let dataPromise;
+let currentShirtId = null;
+let currentPantsId = null;
+let currentShoosId = null;
 
 combineBroekenSec.classList.add("none");
 combineSchoenenSec.classList.add("none");
+resultsSec.classList.add("none");
 
 // Fetch data
 async function getData() {
@@ -45,6 +52,8 @@ function showData(data) {
 
 // Get the matching broek
 async function addPants(currentShirtId) {
+    console.log(currentShirtId)
+    this.currentShirtId = currentShirtId;
     combineBroekenSec.classList.remove("none");
     const data = await dataPromise;
 
@@ -92,6 +101,8 @@ async function fetchDataAndShowData() {
 backBtn.addEventListener("click", fetchDataAndShowData);
 
 async function addShoos(currentPantsId) {
+    console.log(currentPantsId)
+    this.currentPantsId = currentPantsId;
     combineSchoenenSec.classList.remove("none");
     const data = await dataPromise;
 
@@ -115,9 +126,55 @@ async function addShoos(currentPantsId) {
         const html = `
         <article>
             <img src="${img}" alt="${description}">
-            <button onclick="addShoos(${item.id})">Ik wil dit aan</button>
+            <button onclick="showResults(${item.id})">Ik wil dit aan</button>
         </article>`;
 
         combineSchoenen.insertAdjacentHTML("beforeend", html);
+    });
+}
+
+async function showResults(currentShoosId) {
+    console.log(currentShoosId);
+    resultsSec.classList.remove("none");
+    const data = await dataPromise;
+
+    const allCombineData = [];
+
+    // Check if all selected IDs are available
+    if (currentShirtId !== null && currentPantsId !== null && currentShoosId !== null) {
+        // Filter the data based on the selected IDs
+        data.shirts.forEach(item => {
+            if (item.combine.includes(currentShirtId)) {
+                allCombineData.push(item);
+            }
+        });
+
+        data.broeken.forEach(item => {
+            if (item.combine.includes(currentPantsId)) {
+                allCombineData.push(item);
+            }
+        });
+
+        data.schoenen.forEach(item => {
+            if (item.combine.includes(currentShoosId)) {
+                allCombineData.push(item);
+            }
+        });
+    }
+
+    console.log(allCombineData);
+
+    
+
+    allCombineData.forEach(item => {
+        const img = item.img;
+        const description = item.description;
+
+        const html = `
+        <article>
+            <img src="${img}" alt="${description}">
+        </article>`;
+
+        resultsDiv.insertAdjacentHTML("beforeend", html);
     });
 }
