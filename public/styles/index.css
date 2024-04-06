@@ -35,6 +35,10 @@ h1 {
     display: flex;
 }
 
+#category-shirts:target.none {
+    display: none;
+}
+
 /* Has */
 body {
     /* Category shirts */

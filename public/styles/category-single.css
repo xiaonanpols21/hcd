@@ -1,4 +1,4 @@
-.category-single, .combine-broeken {
+.category-single, .combine-broeken, .combine-schoenen {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -48,7 +48,7 @@
     }
 }
 
-.combine-broeken {
+.combine-broeken, .combine-schoenen {
     margin-top: 20px;
 
     > button {

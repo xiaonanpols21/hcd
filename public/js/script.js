@@ -1,9 +1,18 @@
 const categoryShirts = document.querySelector("#category-shirts div");
+const categoryShirtsSec = document.querySelector("#category-shirts");
+
 const combineBroeken = document.querySelector(".combine-broeken div");
 const combineBroekenSec = document.querySelector(".combine-broeken");
 
+const combineSchoenenSec = document.querySelector(".combine-schoenen");
+const combineSchoenen = document.querySelector(".combine-schoenen div");
+
+const backBtn = document.querySelector("#backBtn");
+
 let dataPromise;
+
 combineBroekenSec.classList.add("none");
+combineSchoenenSec.classList.add("none");
 
 // Fetch data
 async function getData() {
@@ -27,7 +36,7 @@ function showData(data) {
         const html = 
         `<article>
             <img src="${img}" alt="${description}">
-            <button onclick="addCombine(${item.id})">Ik wil dit aan</button>
+            <button onclick="addPants(${item.id})">Ik wil dit aan</button>
         </article>`;
 
         categoryShirts.insertAdjacentHTML("beforeend", html);
@@ -35,35 +44,11 @@ function showData(data) {
 }
 
 // Get the matching broek
-async function addCombine(currentShirtId) {
+async function addPants(currentShirtId) {
     combineBroekenSec.classList.remove("none");
     const data = await dataPromise;
 
-    // Get current shirt id
-    // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#41f9c46b5c1f4ed38eb30ad9b03e7306
-    console.log("Current shirt Id:", currentShirtId);
-
-    categoryShirts.innerHTML = "";
-
-    // Push selectedItem
-    // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#2293e39ee18943a4b356b29b8403f245
-    const currentItem = data.shirts.find(item => item.id === currentShirtId);
-
-    const currentData = []
-    currentData.push(currentItem);
-
-    currentData.forEach( item => {
-        const img = item.img;
-        const description = item.description;
-
-        const html = 
-        `<article>
-            <img src="${img}" alt="${description}">
-            <button onclick="addCombine(${item.id})">Ik wil dit aan</button>
-        </article>`;
-
-        categoryShirts.insertAdjacentHTML("beforeend", html);
-    });
+    categoryShirtsSec.classList.add("none");
 
     combineBroeken.innerHTML = "";
 
@@ -83,19 +68,19 @@ async function addCombine(currentShirtId) {
         const html = `
         <article>
             <img src="${img}" alt="${description}">
-            <button onclick="addCombine(${item.id})">Ik wil dit aan</button>
+            <button onclick="addShoos(${item.id})">Ik wil dit aan</button>
         </article>`;
 
         combineBroeken.insertAdjacentHTML("beforeend", html);
     });
 }
 
-const backBtn = document.querySelector("#backBtn");
-
 // Go back
 // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#0e7d49695937436a90066b044ef08295
 async function fetchDataAndShowData() {
     const data = await getData(); 
+
+    categoryShirtsSec.classList.remove("none");
 
     categoryShirts.innerHTML = "";
 
@@ -105,3 +90,34 @@ async function fetchDataAndShowData() {
     combineBroekenSec.classList.add("none");
 }
 backBtn.addEventListener("click", fetchDataAndShowData);
+
+async function addShoos(currentPantsId) {
+    combineSchoenenSec.classList.remove("none");
+    const data = await dataPromise;
+
+    combineBroekenSec.classList.add("none");
+
+    combineSchoenen.innerHTML = "";
+
+    const schoenenCombineData = [];
+    data.schoenen.forEach(item => {
+        if (item.combine.includes(currentPantsId)) {
+            schoenenCombineData.push(item);
+        }
+    });
+
+    console.log(schoenenCombineData)
+    
+    schoenenCombineData.forEach( item => {
+        const img = item.img;
+        const description = item.description;
+
+        const html = `
+        <article>
+            <img src="${img}" alt="${description}">
+            <button onclick="addShoos(${item.id})">Ik wil dit aan</button>
+        </article>`;
+
+        combineSchoenen.insertAdjacentHTML("beforeend", html);
+    });
+}
