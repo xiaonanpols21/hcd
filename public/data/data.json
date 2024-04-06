@@ -4,21 +4,21 @@
             "id": 1,
             "name": "Shirt 'Perfect Tee'",
             "description": "Korte mouwen. Volledig patroon gestreept van 1 centimeter van het merk: Levi’s. Lengte shirt: 67 centimeter. 1 centimeter ronde zwarte kraag. Normale pasvorm. Dus niet strak. Logo Levi’s is rood met witte dik gedrukte, hoofdletter tekst. Het logo is: 3 centimeter breed en 1 centimeter hoog net boven de linkerborst geplaatst.",
-            "img": "../public/img/data/shirt-1.jpg",
+            "img": "public/img/data/shirt-1.jpg",
             "combine": [5]
         },
         {
             "id": 2,
             "name": "Shirt Emma",
             "description": "Lange mouwen. Volledig zwart textuur van verticale strepen. Opstaande kraag met ruches, aan de kraag, armen en onderkant. Strakke pasvorm. Lengte shirt: 60 centimeter.",
-            "img": "../public/img/data/shirt-2.jpg",
+            "img": "public/img/data/shirt-2.jpg",
             "combine": [4, 5, 6]
         },
         {
             "id": 3,
             "name": "Shirt Tom tailor",
             "description": "Kwart lengte mouw. Volledig donker turquoise met een lichter turquoise grote plant van 10 centimeter die 2 centimeter is gedraaid naar de rechter kant. Kraag is rond. Lengte shirt is 67 centimeter. De plant heeft 3 bladeren aan de linker kant, 2 aan de rechter kant en 1 blad steekt uit aan de boven kant. Aan de rechter kant van de plant is er een kleine plant van 3 centimeter. Die plant is 4 centimeter gedraaid naar de rechter kant. 1 blad aan de linker en rechter kant. 1 groot blad steekt uit. Boven op de planten zit er een witte lijn van de omtrek die 1 centimeter gekanteld is naar de linker kant toe.",
-            "img": "../public/img/data/shirt-3.jpg",
+            "img": "public/img/data/shirt-3.jpg",
             "combine": [4, 5]
         }
     ],
@@ -28,21 +28,21 @@
             "id": 4,
             "name": "Skinny Broek 'ANNE'",
             "description": "Zwarte leren effe broek. Skinny broek. Taillehoogte: midium. Lengte: 78 centimeter. ",
-            "img": "../public/img/data/broek-1.jpg",
+            "img": "public/img/data/broek-1.jpg",
             "combine": [1, 2, 3]
         },
         {
             "id": 5,
             "name": "Slimfit Bandplooibroek 'Poptrash'",
             "description": "Licht beige effen broek. Pasvorm: slimfit. Taillehoogte: hoog. Sluiting: touwtjes. Broek heeft een stretch band omvang bij de taille. 2 zijzakken en 2 nep achterzakken. Riem is mogelijk om mee te dragen maar is geen aanrader. Lengte: 68 centimeter.",
-            "img": "../public/img/data/broek-2.jpg",
+            "img": "public/img/data/broek-2.jpg",
             "combine": [1, 2, 3]
         },
         {
             "id": 6,
             "name": "Loosefit Broek 'Lexi'",
             "description": "Vel roze broek. Pasvorm: loosefit. Taillehoogte: hoog. Aan de voorkant, zijkanten en achterkant van de broek pijpen zit er een zichtbare vouw in. Sluiting rits met knoop. Riem is mogelijk om mee te dragen. 2 zijvakken en 2 nep achterzakken. Lengte: 78 centimeter.",
-            "img": "../public/img/data/broek-3.jpg",
+            "img": "public/img/data/broek-3.jpg",
             "combine": [2]
         }
     ]
