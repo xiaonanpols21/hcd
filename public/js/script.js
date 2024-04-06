@@ -7,7 +7,7 @@ combineBroekenSec.classList.add("none");
 
 // Fetch data
 async function getData() {
-    const response = await fetch("../data/data.json"); 
+    const response = await fetch("public/data/data.json"); 
     const data = await response.json();
     return data;
 }
