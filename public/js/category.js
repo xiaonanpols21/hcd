@@ -10,18 +10,18 @@ async function getData() {
     const response = await fetch("public/data/data.json");
     const data = await response.json();
     console.log(data);
-    showData(data)
+    return data;
 }
-getData()
+const dataPromise = getData(); 
 
-function showData(data) {
-    data.shirts.forEach( item => {
+async function showData(data) {
+    data.shirts.forEach(item => {
         const img = item.img;
         const description = item.description;
 
-        const html = 
-        `<li>
-            <button>
+        const html =
+            `<li>
+            <button onclick="chooseItem(${item.id})">
                 <img src="${img}" alt="${description}">
             </button>
         </li>`;
@@ -29,3 +29,13 @@ function showData(data) {
         mainUlEl.insertAdjacentHTML("beforeend", html);
     });
 }
+
+async function chooseItem(currentItemId) {
+    const data = await dataPromise;
+    const currentItem = data.shirts.find(item => item.id === currentItemId);
+    console.log(currentItem);
+    localStorage.setItem('selectedShirt', JSON.stringify(currentItem));
+}
+
+// Call showData after data is fetched
+dataPromise.then(showData).catch(error => console.error(error));
