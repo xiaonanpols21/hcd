@@ -133,48 +133,18 @@ async function addShoos(currentPantsId) {
     });
 }
 
+async function getCurrentItems() {
+    const data = await dataPromise;
+
+    const currentItemsId = [];
+    data.forEach(item => {
+
+    });
+
+}
+
 async function showResults(currentShoosId) {
     console.log(currentShoosId);
     resultsSec.classList.remove("none");
     const data = await dataPromise;
-
-    const allCombineData = [];
-
-    // Check if all selected IDs are available
-    if (currentShirtId !== null && currentPantsId !== null && currentShoosId !== null) {
-        // Filter the data based on the selected IDs
-        data.shirts.forEach(item => {
-            if (item.combine.includes(currentShirtId)) {
-                allCombineData.push(item);
-            }
-        });
-
-        data.broeken.forEach(item => {
-            if (item.combine.includes(currentPantsId)) {
-                allCombineData.push(item);
-            }
-        });
-
-        data.schoenen.forEach(item => {
-            if (item.combine.includes(currentShoosId)) {
-                allCombineData.push(item);
-            }
-        });
-    }
-
-    console.log(allCombineData);
-
-    
-
-    allCombineData.forEach(item => {
-        const img = item.img;
-        const description = item.description;
-
-        const html = `
-        <article>
-            <img src="${img}" alt="${description}">
-        </article>`;
-
-        resultsDiv.insertAdjacentHTML("beforeend", html);
-    });
 }
