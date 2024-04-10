@@ -31,3 +31,8 @@ Hier heb ik dat als je een keuzen hebt gemaakt, dat de gekozen item weg gaat.
 ![Versie 2 1](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-2-1.png)
 
 Ik heb dat de gekozen items als laatste worden gezien. De keuzes die eerder zijn gemaakt worden in de local storage opgeslagen en hier worden de keuzes getoond vanuit de local storage. 
+
+### Versie 3
+Ik ging testen op mobiel en merkte dat het best wel ruk is omdat je moet verder swipen om hem te kiezen. Dus nu heb ik er buttons van gemaakt en de img tag in de button en met meerdere pagina's toegevoegd. Per pagina een nieuw item. De data wordt opgeslagen in de local storage. En wordt uit de local storage gehaald bij de result pagina. 
+
+![Versie 3](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-3.png)
