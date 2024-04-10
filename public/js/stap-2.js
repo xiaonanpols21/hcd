@@ -39,7 +39,7 @@ async function showData(data, selectedShirtArray) {
 
         const html =
             `<li>
-            <a href="" onclick="chooseItem(${item.id})">
+            <a href="stap-3.html" onclick="chooseItem(${item.id})">
                 <img src="${img}" alt="${description}">
             </a>
         </li>`;
