@@ -52,8 +52,9 @@ function showData(data) {
 
 // Get the matching broek
 async function addPants(currentShirtId) {
-    console.log(currentShirtId)
-    this.currentShirtId = currentShirtId;
+    const data = await dataPromise;
+    const currentShirt = data.shirts.find(item => item.id === currentShirtId);
+    console.log(currentShirt);
 
     // updateLocalStorage({
     //     target: {
@@ -63,7 +64,7 @@ async function addPants(currentShirtId) {
     // });
 
     combineBroekenSec.classList.remove("none");
-    const data = await dataPromise;
+    
 
     categoryShirtsSec.classList.add("none");
 
@@ -107,8 +108,9 @@ async function fetchDataAndShowData() {
 backBtn.addEventListener("click", fetchDataAndShowData);
 
 async function addShoos(currentPantsId) {
-    console.log(currentPantsId)
-    this.currentPantsId = currentPantsId;
+    const data = await dataPromise;
+    const currentPants = data.broeken.find(item => item.id === currentPantsId);
+    console.log(currentPants);
 
     // updateLocalStorage({
     //     target: {
@@ -118,7 +120,6 @@ async function addShoos(currentPantsId) {
     // });
 
     combineSchoenenSec.classList.remove("none");
-    const data = await dataPromise;
 
     combineBroekenSec.classList.add("none");
 
@@ -146,7 +147,9 @@ async function addShoos(currentPantsId) {
 }
 
 async function showResults(currentShoosId) {
-    console.log(currentShoosId);
+    const data = await dataPromise;
+    const currentShoos = data.schoenen.find(item => item.id === currentShoosId);
+    console.log(currentShoos);
 
     // updateLocalStorage({
     //     target: {
@@ -157,7 +160,6 @@ async function showResults(currentShoosId) {
     
     resultsSec.classList.remove("none");
     combineSchoenenSec.classList.add("none");
-    const data = await dataPromise;
 
     
 }
