@@ -21,10 +21,18 @@ async function getData() {
 }
 const dataPromise = getData(); 
 
-async function showData(data) {
+async function showData(data, selectedShirtArray) {
     console.log(selectedShirtArray)
+
+    const combineData = [];
+     data.broeken.forEach(item => {
+        if (item.combine.includes(selectedShirtArray.id)) {
+            combineData.push(item);
+        }
+    });
+    console.log(combineData)
     
-    data.broeken.forEach(item => {
+    combineData.forEach(item => {
         const img = item.img;
         const description = item.description;
 
@@ -37,9 +45,15 @@ async function showData(data) {
 
         mainUlEl.insertAdjacentHTML("beforeend", html);
     });
-}
-showData()
+};
 
+async function initialize() {
+    const selectedShirtArray = getChosenShirt(); // Retrieve selected shirts array
+    const data = await dataPromise; // Fetch data
+    showData(data, selectedShirtArray); // Pass selectedShirtArray to showData
+}
+
+initialize();
 
 
 
