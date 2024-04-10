@@ -31,7 +31,7 @@ async function showData(data, selectedShirtArray) {
         }
     });
     console.log(combineData);
-    localStorage.setItem('selectedPants', JSON.stringify(combineData));
+    localStorage.setItem('CombinePants', JSON.stringify(combineData));
     
     combineData.forEach(item => {
         const img = item.img;
@@ -39,7 +39,7 @@ async function showData(data, selectedShirtArray) {
 
         const html =
             `<li>
-            <a href="stap-3.html" onclick="chooseItem(${item.id})">
+            <a href="" onclick="chooseItem(${item.id})">
                 <img src="${img}" alt="${description}">
             </a>
         </li>`;
@@ -53,9 +53,14 @@ async function initialize() {
     const data = await dataPromise; // Fetch data
     showData(data, selectedShirtArray); // Pass selectedShirtArray to showData
 }
-
 initialize();
 
+async function chooseItem(currentItemId) {
+    const data = await dataPromise;
+    const currentItem = data.broeken.find(item => item.id === currentItemId);
+    console.log(currentItem);
+    localStorage.setItem('selectedBroek', JSON.stringify(currentItem));
+}
 
 
 
