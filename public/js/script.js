@@ -161,8 +161,27 @@ async function showResults(currentShoosId) {
     resultsSec.classList.remove("none");
     combineSchoenenSec.classList.add("none");
 
-    
+    const chosenItems = JSON.parse(localStorage.getItem('chosenItems'));
+    console.log(chosenItems);
+
+    // Iterate over the properties of chosenItems
+    for (const key in chosenItems) {
+        if (Object.hasOwnProperty.call(chosenItems, key)) {
+            const item = chosenItems[key];
+            const img = item.img;
+            const description = item.description;
+
+            const html = `
+            <article>
+                <img src="${img}" alt="${description}">
+                <button onclick="showResults(${item.id})">Ik wil dit aan</button>
+            </article>`;
+
+            resultsDiv.insertAdjacentHTML("beforeend", html);
+        }
+    }
 }
+
 
 // Local storage
 // Bron: https://blog.logrocket.com/localstorage-javascript-complete-guide/
