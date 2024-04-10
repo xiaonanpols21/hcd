@@ -56,12 +56,12 @@ async function addPants(currentShirtId) {
     const currentShirt = data.shirts.find(item => item.id === currentShirtId);
     console.log(currentShirt);
 
-    // updateLocalStorage({
-    //     target: {
-    //         name: 'shirt',
-    //         value: currentShirtId
-    //     }
-    // });
+    updateLocalStorage({
+        target: {
+            name: 'shirt',
+            value: currentShirt
+        }
+    });
 
     combineBroekenSec.classList.remove("none");
     
@@ -112,12 +112,12 @@ async function addShoos(currentPantsId) {
     const currentPants = data.broeken.find(item => item.id === currentPantsId);
     console.log(currentPants);
 
-    // updateLocalStorage({
-    //     target: {
-    //         name: 'pants',
-    //         value: currentPantsId
-    //     }
-    // });
+    updateLocalStorage({
+        target: {
+            name: 'pants',
+            value: currentPants
+        }
+    });
 
     combineSchoenenSec.classList.remove("none");
 
@@ -151,12 +151,12 @@ async function showResults(currentShoosId) {
     const currentShoos = data.schoenen.find(item => item.id === currentShoosId);
     console.log(currentShoos);
 
-    // updateLocalStorage({
-    //     target: {
-    //         name: 'shoes',
-    //         value: currentShoosId
-    //     }
-    // });
+    updateLocalStorage({
+        target: {
+            name: 'shoes',
+            value: currentShoos
+        }
+    });
     
     resultsSec.classList.remove("none");
     combineSchoenenSec.classList.add("none");
@@ -167,21 +167,21 @@ async function showResults(currentShoosId) {
 // Local storage
 // Bron: https://blog.logrocket.com/localstorage-javascript-complete-guide/
 // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#d07731522b274a09bad98712f9ce0252
-// function updateLocalStorage(event) {
-//     const chosenItems = JSON.parse(localStorage.getItem('chosenItems')) || {};
-//     const itemType = event.target.name;
-//     const itemId = event.target.value;
+function updateLocalStorage(event) {
+    const chosenItems = JSON.parse(localStorage.getItem('chosenItems')) || {};
+    const itemType = event.target.name;
+    const itemId = event.target.value;
 
-//     if (itemType === 'shirt') {
-//         chosenItems['currentShirtId'] = itemId;
-//     } else if (itemType === 'pants') {
-//         chosenItems['currentPantsId'] = itemId;
-//     } else if (itemType === 'shoes') {
-//         chosenItems['currentShoosId'] = itemId;
-//     }
+    if (itemType === 'shirt') {
+        chosenItems['shirt'] = itemId;
+    } else if (itemType === 'pants') {
+        chosenItems['broek'] = itemId;
+    } else if (itemType === 'shoes') {
+        chosenItems['schoenen'] = itemId;
+    }
 
-//     localStorage.setItem('chosenItems', JSON.stringify(chosenItems));
-//     console.log(chosenItems);
-// }
+    localStorage.setItem('chosenItems', JSON.stringify(chosenItems));
+    console.log(chosenItems);
+}
 
 
