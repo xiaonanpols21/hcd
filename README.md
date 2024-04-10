@@ -24,10 +24,10 @@ Hier heb ik de applicatie soort van werkend. Als je klikt op een categorie, ga j
 - Terug knop, is dat handig?
 
 ### Versie 2
-![Versie 2](https://github.com/xiaonanpols21/hcd/blob/main-2/public/img/readme/v-2.jpg)
+![Versie 2](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-2.jpg)
 
 Hier heb ik dat als je een keuzen hebt gemaakt, dat de gekozen item weg gaat. 
 
-![Versie 2 1](https://github.com/xiaonanpols21/hcd/blob/main-2/public/img/readme/v-2-1.jpg)
+![Versie 2 1](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-2-1.jpg)
 
 Ik heb dat de gekozen items als laatste worden gezien. De keuzes die eerder zijn gemaakt worden in de local storage opgeslagen en hier worden de keuzes getoond vanuit de local storage. 
