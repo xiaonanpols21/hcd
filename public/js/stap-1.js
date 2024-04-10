@@ -1,10 +1,10 @@
 const mainUlEl = document.querySelector("main ul");
 
-function getLocalStorage() {
+function getChosenCategory() {
     const selectedCategory = localStorage.getItem('selectedCategory');
     console.log("Selected category", selectedCategory);
 }
-getLocalStorage();
+getChosenCategory();
 
 async function getData() {
     const response = await fetch("public/data/data.json");
@@ -21,9 +21,9 @@ async function showData(data) {
 
         const html =
             `<li>
-            <button onclick="chooseItem(${item.id})">
+            <a href="stap-2.html" onclick="chooseItem(${item.id})">
                 <img src="${img}" alt="${description}">
-            </button>
+            </a>
         </li>`;
 
         mainUlEl.insertAdjacentHTML("beforeend", html);
