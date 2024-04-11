@@ -1,8 +1,6 @@
 @import "./variables.css";
-@import "./category.css";
-@import "./category-single.css";
-@import "./combine.css";
-@import "./category-shirt.css";
+@import "./category-1.css";
+@import "./category-item.css";
 @import "./breakpoints.css";
 
 * {
