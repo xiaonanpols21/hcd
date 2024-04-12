@@ -35,6 +35,9 @@ Ik heb dat de gekozen items als laatste worden gezien. De keuzes die eerder zijn
 ### Versie 3
 Ik ging testen op mobiel en merkte dat het best wel ruk is omdat je moet verder swipen om hem te kiezen. Dus nu heb ik er buttons van gemaakt en de img tag in de button en met meerdere pagina's toegevoegd. Per pagina een nieuw item. De data wordt opgeslagen in de local storage. En wordt uit de local storage gehaald bij de result pagina. 
 
+### Versie 4
+Na de feedback van Petra bij prototype 1, ben ik de applicatie meer dynamic gaan maken wat nu werkt. Volgende stap zou zijn: uitgebreiderde data, meer categories toevoegen en dan kleding sorteren based on weather.
+
 ## Testen
 ### Prototype 1
 Ik had getest. Ze kon makkelijk door de app. Ze had niet opmerkingen wat beter kon. Wat ik zelf zie is: ze vroeg: 'Moet ik zelf weten wat matcht? Ik zo nee dat doet hij automatisch. Dus ik moet met tekst beter vertellen dat de items automatisch wordt gematcht met elkaar. 
