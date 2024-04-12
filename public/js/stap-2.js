@@ -1,4 +1,5 @@
 const mainUlEl = document.querySelector("main ul");
+const h1 = document.querySelector("h1");
 
 function getChosenCategory() {
     const selectedItem1 = localStorage.getItem('selectedItem1');
@@ -29,6 +30,37 @@ async function showNextCategoryItems(data, selectedCategory) {
     const nextIndex = (categories.indexOf(selectedCategory) + 1) % categories.length;
     const nextCategory = categories[nextIndex];
     const nextCategoryItems = data[nextCategory];
+
+    let modifiedNextCategory;
+    let modifiedSelectedCategory;
+    let vorigeOrVorig;
+
+    // Juiste taal
+    // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#20bbbb97b15c4f3d924d0f344ea66ef2
+    if (nextCategory === "broeken") {
+        modifiedNextCategory = "broek";
+    } else if (nextCategory === "shirts") {
+        modifiedNextCategory = "shirt";
+    } else {
+        modifiedNextCategory = "schoenen";
+    }
+
+    if (selectedCategory === "broeken") {
+        modifiedSelectedCategory = "broek";
+    } else if (selectedCategory === "shirts") {
+        modifiedSelectedCategory = "shirt";
+    } else {
+        modifiedSelectedCategory = "schoenen";
+    }
+
+    if (modifiedSelectedCategory === "shirt") {
+        vorigeOrVorig = "vorig";
+    } else {
+        vorigeOrVorig = "vorige";
+    }
+
+    h1.textContent = `Kies bijbehorende ${modifiedNextCategory} bij ${vorigeOrVorig} ${modifiedSelectedCategory}`;
+
     return nextCategoryItems;
 }
 

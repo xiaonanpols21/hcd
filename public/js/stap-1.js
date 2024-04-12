@@ -5,6 +5,8 @@ function getChosenCategory() {
     const selectedCategory = localStorage.getItem('selectedCategory');
     console.log("Selected category", selectedCategory);
 
+    //h1.textContent = `Kies een ${selectedCategory}`;
+
     if (selectedCategory === "shirts") {
         h1.textContent = "Kies een shirt";
     } else if (selectedCategory === "broeken") {
