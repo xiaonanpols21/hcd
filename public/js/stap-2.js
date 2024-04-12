@@ -35,6 +35,8 @@ async function showNextCategoryItems(data, selectedCategory) {
     let modifiedSelectedCategory;
     let vorigeOrVorig;
 
+    localStorage.setItem('selectedCategory2', nextCategory);
+
     // Juiste taal
     // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#20bbbb97b15c4f3d924d0f344ea66ef2
     if (nextCategory === "broeken") {
@@ -89,8 +91,6 @@ async function showData(data, selectedItem1) {
     });
 }
 
-
-
 async function initialize() {
     const selectedItem1 = await getChosenCategory(); 
     const selectedCategory = localStorage.getItem('selectedCategory'); 
@@ -102,8 +102,10 @@ async function initialize() {
 initialize();
 
 async function chooseItem(currentItemId) {
+    const selectedCategory2 = localStorage.getItem('selectedCategory2');
     const data = await dataPromise;
-    const currentItem = data.broeken.find(item => item.id === currentItemId);
-    console.log(currentItem);
-    localStorage.setItem('selectedBroek', JSON.stringify(currentItem));
+    const categoryData = data[selectedCategory2];
+    const currentItem = categoryData.find(item => item.id === currentItemId);
+
+    localStorage.setItem('selectedItem2', JSON.stringify(currentItem));
 }

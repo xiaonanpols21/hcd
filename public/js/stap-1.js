@@ -58,14 +58,8 @@ async function chooseItem(currentItemId) {
     const selectedCategory = localStorage.getItem('selectedCategory');
     const data = await dataPromise;
     const categoryData = data[selectedCategory];
-
-    if (!categoryData) {
-        console.error(`Data for category '${selectedCategory}' not found.`);
-        return;
-    }
-
     const currentItem = categoryData.find(item => item.id === currentItemId);
-    console.log(currentItem);
+
     localStorage.setItem('selectedItem1', JSON.stringify(currentItem));
 }
 
