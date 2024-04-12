@@ -28,24 +28,18 @@ async function showNextCategoryItems(data, selectedCategory) {
     const categories = Object.keys(data);
     const nextIndex = (categories.indexOf(selectedCategory) + 1) % categories.length;
     const nextCategory = categories[nextIndex];
-
     const nextCategoryItems = data[nextCategory];
-    
-
-   
-
     return nextCategoryItems;
 }
 
 async function showData(data, selectedItem1) {
-
     const combineData = [];
+
     data.forEach(item => {
         if (item.combine.includes(selectedItem1.id)) {
             combineData.push(item);
         }
     });
-    console.log(combineData);
 
     localStorage.setItem('CombineData', JSON.stringify(combineData));
 
@@ -59,7 +53,6 @@ async function showData(data, selectedItem1) {
                 <img src="${img}" alt="${description}">
             </a>
         </li>`;
-
         mainUlEl.insertAdjacentHTML("beforeend", html);
     });
 }
@@ -67,14 +60,14 @@ async function showData(data, selectedItem1) {
 
 
 async function initialize() {
-    const selectedItem1 = await getChosenCategory(); // Retrieve selected category
-    const selectedCategory = localStorage.getItem('selectedCategory'); // Retrieve selected category
-    const data = await dataPromise; // Fetch data
+    const selectedItem1 = await getChosenCategory(); 
+    const selectedCategory = localStorage.getItem('selectedCategory'); 
+    const data = await dataPromise; 
     const nextCategoryItems = await showNextCategoryItems(data, selectedCategory);
+
     showData(nextCategoryItems, selectedItem1);
 }
 initialize();
-
 
 async function chooseItem(currentItemId) {
     const data = await dataPromise;
@@ -82,5 +75,3 @@ async function chooseItem(currentItemId) {
     console.log(currentItem);
     localStorage.setItem('selectedBroek', JSON.stringify(currentItem));
 }
-
-
