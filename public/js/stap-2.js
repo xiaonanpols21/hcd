@@ -17,6 +17,7 @@ getChosenCategory();
 async function getData() {
     const response = await fetch("public/data/data.json");
     const data = await response.json();
+    console.log(data)
     return data;
 }
 const dataPromise = getData(); 
@@ -34,23 +35,16 @@ async function showNextCategoryItems(data, selectedItem1) {
 }
 
 async function showData(data, selectedItem1) {
-    console.log(data);
 
     const combineData = [];
-
-
-
     data.forEach(item => {
-        // Check if the combine array of the current item includes the id of the selected item
         if (item.combine.includes(selectedItem1.id)) {
-            // If it does, push the current item to the combineData array
             combineData.push(item);
         }
     });
     console.log(combineData);
 
-
-    localStorage.setItem('CombinePants', JSON.stringify(combineData));
+    localStorage.setItem('Combine Data', JSON.stringify(combineData));
 
     combineData.forEach(item => {
         const img = item.img;
