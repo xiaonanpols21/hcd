@@ -6,7 +6,6 @@ function getChosenCategory() {
 
     if (selectedItem1) {
         const selectedItemArray = JSON.parse(selectedItem1);
-        console.log(selectedItemArray);
         return selectedItemArray;
     } else {
         console.log("No selected shirt found");
@@ -75,7 +74,7 @@ async function showData(data, selectedItem1) {
         }
     });
 
-    localStorage.setItem('CombineData', JSON.stringify(combineData));
+    localStorage.setItem('CombineData1', JSON.stringify(combineData));
 
     combineData.forEach(item => {
         const img = item.img;
