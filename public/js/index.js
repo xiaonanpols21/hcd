@@ -1,9 +1,27 @@
 const links = document.querySelectorAll('a');
+const h2 = document.querySelector(".weather h2");
+
+async function getWeather() {
+    const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=52.374&longitude=4.8897&current=temperature_2m");
+    const data = await response.json();
+    console.log(data);
+    displayWeather(data);
+}
+getWeather()
+
+// Bron: https://www.w3schools.com/jsref/jsref_round.asp
+async function displayWeather(data) {
+    const temp = data.current.temperature_2m;
+    const afronden = Math.round(temp);
+    console.log(afronden)
+    localStorage.setItem('currentTemp', afronden);
+
+    h2.textContent = `Het is vandaag ${afronden} graden`;
+}
 
 async function getData() {
     const response = await fetch("public/data/data.json");
     const data = await response.json();
-    console.log(data);
     return data;
 }
 const dataPromise = getData(); 

@@ -5,21 +5,40 @@
             "name": "Shirt 'Perfect Tee'",
             "description": "Korte mouwen. Volledig patroon gestreept van 1 centimeter van het merk: Levi’s. Lengte shirt: 67 centimeter. 1 centimeter ronde zwarte kraag. Normale pasvorm. Dus niet strak. Logo Levi’s is rood met witte dik gedrukte, hoofdletter tekst. Het logo is: 3 centimeter breed en 1 centimeter hoog net boven de linkerborst geplaatst.",
             "img": "public/img/data/shirt-1.jpg",
-            "combine": [5, 7, 8, 9]
+            "season": 20,
+            "combine": [5, 7, 8, 9, 13, 14]
         },
         {
             "id": 2,
             "name": "Shirt Emma",
             "description": "Lange mouwen. Volledig zwart textuur van verticale strepen. Opstaande kraag met ruches, aan de kraag, armen en onderkant. Strakke pasvorm. Lengte shirt: 60 centimeter.",
             "img": "public/img/data/shirt-2.jpg",
-            "combine": [4, 5, 6, 7, 8]
+            "season": 5,
+            "combine": [4, 5, 6, 7, 8, 12, 13, 15]
         },
         {
             "id": 3,
             "name": "Shirt Tom tailor",
             "description": "Kwart lengte mouw. Volledig donker turquoise met een lichter turquoise grote plant van 10 centimeter die 2 centimeter is gedraaid naar de rechter kant. Kraag is rond. Lengte shirt is 67 centimeter. De plant heeft 3 bladeren aan de linker kant, 2 aan de rechter kant en 1 blad steekt uit aan de boven kant. Aan de rechter kant van de plant is er een kleine plant van 3 centimeter. Die plant is 4 centimeter gedraaid naar de rechter kant. 1 blad aan de linker en rechter kant. 1 groot blad steekt uit. Boven op de planten zit er een witte lijn van de omtrek die 1 centimeter gekanteld is naar de linker kant toe.",
             "img": "public/img/data/shirt-3.jpg",
-            "combine": [4, 5, 7, 8, 9]
+            "season": 15,
+            "combine": [4, 5, 7, 8, 9, 13, 14]
+        },
+        {
+            "id": 10,
+            "name": "Shirt 'ELLETTE'",
+            "description": "Kwart lengte mouw. Zwart effen, ronde hals shirt. Lengte shirt: 60 centimeter. Losse pasvorm.",
+            "img": "public/img/data/shirt-4.jpg",
+            "season": 20,
+            "combine": [4, 5, 6, 12, 13, 7, 8, 9, 15]
+        },
+        {
+            "id": 11,
+            "name": "Shirt ‘Smilla’",
+            "description": "Licht blauw lange mouwen, kleine ronde gaatjes van 2 millimeter in stof. Bloemen textuur van 5 bladeren patroon over het hele shirt. In die bladeren zijn kleine gaatjes gezet. Lengte shirt: 60 centimeter. Normale pasvorm.",
+            "img": "public/img/data/shirt-5.jpg",
+            "season": 15,
+            "combine": [4, 7, 9]
         }
     ],
 
@@ -29,21 +48,40 @@
             "name": "Skinny Broek 'ANNE'",
             "description": "Zwarte leren effe broek. Skinny broek. Taillehoogte: midium. Lengte: 78 centimeter. ",
             "img": "public/img/data/broek-1.jpg",
-            "combine": [1, 2, 3, 7]
+            "season": 5,
+            "combine": [1, 2, 3, 7, 10, 11, 15]
         },
         {
             "id": 5,
             "name": "Slimfit Bandplooibroek 'Poptrash'",
             "description": "Licht beige effen broek. Pasvorm: slimfit. Taillehoogte: hoog. Sluiting: touwtjes. Broek heeft een stretch band omvang bij de taille. 2 zijzakken en 2 nep achterzakken. Riem is mogelijk om mee te dragen maar is geen aanrader. Lengte: 68 centimeter.",
             "img": "public/img/data/broek-2.jpg",
-            "combine": [1, 2, 3, 7, 9]
+            "season": 10,
+            "combine": [1, 2, 3, 7, 9, 10, 14]
         },
         {
             "id": 6,
             "name": "Loosefit Broek 'Lexi'",
             "description": "Vel roze broek. Pasvorm: loosefit. Taillehoogte: hoog. Aan de voorkant, zijkanten en achterkant van de broek pijpen zit er een zichtbare vouw in. Sluiting rits met knoop. Riem is mogelijk om mee te dragen. 2 zijvakken en 2 nep achterzakken. Lengte: 78 centimeter.",
             "img": "public/img/data/broek-3.jpg",
-            "combine": [2, 7, 8]
+            "season": 15,
+            "combine": [2, 7, 8, 10, 14, 15]
+        },
+        {
+            "id": 12,
+            "name": "Regular Cargobroek 'CORINNA'",
+            "description": "Grijze effen short. Pasvorm: kort/mini. Taillehoogte: hoog. Aan de voor kant heb je stof die gedraaid is van 5 centimeter die schuin loopt van begin tot eind om de kruis te verbergen waardoor het lijkt op een rok aan de voorkant. Maar het in een korte broek aan de achter kant. Riem is niet mogelijk. Aan de rechter kan een middel grote zak.",
+            "img": "public/img/data/broek-4.jpg",
+            "season": 20,
+            "combine": [2, 10, 8]
+        },
+        {
+            "id": 13,
+            "name": "Slimfit Broek 'BECKY'",
+            "description": "Grijze korte spijkerbroek. Pasvorm: slimfit. Taillehoogte: medium. Aan de voorkant bij de benen is de grijs wat lichter vanwege dat het spijker stof is. Het gedeelte van de knoop en de riem is groter dan normaal waardoor de broek 2 knopen heeft om hem aan en uit te doen. Riem is mogelijk om mee te dragen.",
+            "img": "public/img/data/broek-5.jpg",
+            "season": 20,
+            "combine": [1, 2, 3, 10, 11, 7, 9, 14]
         }
     ],
 
@@ -53,21 +91,41 @@
             "name": "Veterlaarsjes '1460 Smooth'",
             "description": "Zwarte leren effen Dokter Martens. Blok hak: platte hak van 0 tot 3 centimeter hoog. Ronde neus en zwart met geel lintje aan begin van laars aan de achter kant. Sluiting: veters. Gele naai strepen aan boven kant van zool van 3 millimeter om de zool heen. Aan de zijkanten is vastgemaakt met halve ronde vormen van 3 naai strepen. Onderkant van zool heeft een zwarte ronde omtrek van 2 centimeter. Midden van de onderkant zool is donker bruin. Hoogte schoen: Enkel hoog.",
             "img": "public/img/data/schoen-1.jpg",
-            "combine": [1, 2, 3, 4, 5, 6]
+            "season": "all",
+            "combine": [1, 2, 3, 4, 5, 6, 10, 11, 13]
         },
         {
             "id": 8,
             "name": "Enkellaarsjes 'Azra'",
             "description": "Effen kleur: crème enkel laarzen. Blok hak: hak van 7 tot 10 centimeter hoog. Ronde neus. Korte sier veters aan de achterkant van de schoen. Gouden uit puntjes van de veters. Sluiting: rits met een gouden rits hanger. Zool kleur: bruin. Onderkant van zool heeft een omtrek van 2 centimeter met geen textuur. Midden van de onderkant heeft een textuur van strepen horizontaal van 2 millimeter. ",
             "img": "public/img/data/schoen-2.jpg",
-            "combine": [1, 2, 3, 4, 6]
+            "season": "all",
+            "combine": [1, 2, 3, 4, 6, 10, 12]
         },
         {
             "id": 9,
             "name": "Sneakers laag 'Samba'",
             "description": "Pastel gekleurde sneakers van Adidas. Basis van schoen is wit. Ronde neus met pastelgroen erop die rond om de schoen gaat naar binnen toe op de neus. Logo Adidas zijn 3 pastel blauwe strepen aan beide kanten van 3 centimeter. Bij de hiel kant zit er een pastel blauw vlakje van 3 centimeter aan begin van de kant die gaat naar 4 centimeter om de hiel beter te steunen. Bruine zool begint 2 centimeter aan de zijkanten. De textuur van de onderkant is speels. Van top tot midden is 3 hoeken textuur van een halve centimeter die in een rondje herhaalt waardoor het lijkt alsof het een 6 hoek lijkt waarbij de lijnen naar het midden komen van de punten. En dat herhaalt zich horizontaal en verticaal tot het midden van de zool. Van midden tot onder van de zool is die ronde bochten. Hoogte van de ronde bocht is 1 centimeter. Breedte van de ronde bocht is een halve centimeter. En dat herhaalt zicht in de breedte en dat wordt herhaald over de hoogte.",
             "img": "public/img/data/schoen-3.jpg",
-            "combine": [1, 3, 4, 5]
+            "season": 5,
+            "combine": [1, 3, 4, 5, 10, 11, 13]
+        },
+        {
+            "id": 14,
+            "name": "Sandaal ‘Fisherman’",
+            "description": "Donkerbruin effen zandalen. Blok hak: platte hak van 3 tot 7 centimeter. Dus een hoog plateau. Ronde open neus. Een vlak van 5 centimeter die van midden neus naar binnen gaat naar de enkel. Aan de zijkanten vlakken van 5 centimeter, 4 om precies te zijn. Tussen die vlakken, ademruimte van 2 centimeter. Sluiting: riem. Riem kleur: goud. ",
+            "img": "public/img/data/schoen-4.jpg",
+            "season": 20,
+            "combine": [5, 6, 13, 1, 3]
+        },
+        {
+            "id": 15,
+            "name": "Sandaal ‘Elea’",
+            "description": "Beige sandaal hakken. Blok hak: hak van 7 tot 7 centimter. Ronde neus. Aan de vorkant een vlak van 7 centimeter. Om de enkel een bandje van 1 centimeter. Sluiting: riem. Rem kleur: goud.",
+            "img": "public/img/data/schoen-5.jpg",
+            "season": 20,
+            "combine": [4, 5, 6, 2, 10]
         }
+
     ]
 }

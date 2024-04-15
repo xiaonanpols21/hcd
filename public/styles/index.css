@@ -1,6 +1,7 @@
 @import "./variables.css";
 @import "./category-1.css";
 @import "./category-item.css";
+@import "./weather.css";
 @import "./breakpoints.css";
 
 * {
@@ -20,30 +21,3 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* JS */
-.none {
-    display: none;
-}
-
-/* Target */
-#category-shirts {
-    display: none;
-}
-
-#category-shirts:target {
-    display: flex;
-}
-
-#category-shirts:target.none {
-    display: none;
-}
-
-/* Has */
-body {
-    /* Category shirts */
-    &:has(#category-shirts:target) {
-        .category {
-            display: none;
-        }
-    } 
-}
