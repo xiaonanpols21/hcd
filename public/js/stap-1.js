@@ -11,7 +11,6 @@ function getChosenCategory() {
     } else if (selectedCategory === "schoenen") {
         h1.textContent = "Kies schoenen";
     }
-    
 }
 getChosenCategory();
 
@@ -32,7 +31,7 @@ async function showData(data, selectedCategory) {
     // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#93c157f5a07b4fdcbd7058cba94dbfcd
     if (currentTemp <= 5) {
         console.log("Het is winter tijd");
-        // Sort data for winter
+
         categoryData.sort((a, b) => {
             if (a.season === 5) return -1; // Place items with season 5 first
             if (b.season === 5) return 1; // Place items with season other than 5 later
@@ -40,7 +39,6 @@ async function showData(data, selectedCategory) {
         });
     } else if (currentTemp <= 10) {
         console.log("Het is autumn tijd");
-        // Sort data for autumn
         categoryData.sort((a, b) => {
             if (a.season === 10) return -1; // Place items with season 10 first
             if (b.season === 10) return 1; // Place items with season other than 10 later
@@ -48,7 +46,6 @@ async function showData(data, selectedCategory) {
         });
     } else if (currentTemp <= 15) {
         console.log("Het is spring tijd");
-        // Sort data for spring
         categoryData.sort((a, b) => {
             if (a.season === 15) return -1; // Place items with season 15 first
             if (b.season === 15) return 1; // Place items with season other than 15 later
@@ -56,7 +53,6 @@ async function showData(data, selectedCategory) {
         });
     } else {
         console.log("Het is summer tijd");
-        // Sort data for summer
         categoryData.sort((a, b) => {
             if (a.season === 20) return -1; // Place items with season 20 first
             if (b.season === 20) return 1; // Place items with season other than 20 later

@@ -62,6 +62,7 @@ async function showNextCategoryItems(data, selectedCategory) {
 }
 
 async function showData(data, selectedItem2) {
+    const currentTemp = localStorage.getItem('currentTemp');
     const combineData = [];
 
     data.forEach(item => {
@@ -74,6 +75,37 @@ async function showData(data, selectedItem2) {
 
     localStorage.setItem('CombineData2', JSON.stringify(combineData));
     
+    if (currentTemp <= 5) {
+        console.log("Het is winter tijd");
+
+        combineData.sort((a, b) => {
+            if (a.season === 5) return -1; 
+            if (b.season === 5) return 1; 
+            return 0; 
+        });
+    } else if (currentTemp <= 10) {
+        console.log("Het is autumn tijd");
+        combineData.sort((a, b) => {
+            if (a.season === 10) return -1; 
+            if (b.season === 10) return 1;
+            return 0; 
+        });
+    } else if (currentTemp <= 15) {
+        console.log("Het is spring tijd");
+        combineData.sort((a, b) => {
+            if (a.season === 15) return -1; 
+            if (b.season === 15) return 1; 
+            return 0; 
+        });
+    } else {
+        console.log("Het is summer tijd");
+        combineData.sort((a, b) => {
+            if (a.season === 20) return -1; 
+            if (b.season === 20) return 1; 
+            return 0; 
+        });
+    }
+
     combineData.forEach(item => {
         const img = item.img;
         const description = item.description;
