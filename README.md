@@ -35,6 +35,8 @@ Ik heb dat de gekozen items als laatste worden gezien. De keuzes die eerder zijn
 ### Versie 3
 Ik ging testen op mobiel en merkte dat het best wel ruk is omdat je moet verder swipen om hem te kiezen. Dus nu heb ik er buttons van gemaakt en de img tag in de button en met meerdere pagina's toegevoegd. Per pagina een nieuw item. De data wordt opgeslagen in de local storage. En wordt uit de local storage gehaald bij de result pagina. 
 
+![Versie 3](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-3.png)
+
 ### Versie 4
 Na de feedback van Petra bij prototype 1, ben ik de applicatie meer dynamic gaan maken wat nu werkt. Nu is het zo: kies category, laat die zien. Kies een item en dan, toon volgende category uit de lijst en laat dan die items zien die al gematcht zijn met elkaar.
 
