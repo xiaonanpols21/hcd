@@ -27,6 +27,8 @@ async function showData(data, selectedCategory) {
     const categoryData = data[selectedCategory];
     const currentTemp = localStorage.getItem('currentTemp');
 
+    
+
     // Sort data
     // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#93c157f5a07b4fdcbd7058cba94dbfcd
     if (currentTemp <= 5) {
