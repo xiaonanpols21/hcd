@@ -67,7 +67,6 @@ async function showNextCategoryItems(data, selectedCategory) {
 
 async function showData(data, selectedItem1) {
     const currentTemp = localStorage.getItem('currentTemp');
-    console.log(currentTemp);
 
     const combineData = [];
 
