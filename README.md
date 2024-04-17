@@ -65,51 +65,40 @@ async function displayWeather(data) {
 }
 ```
 
-![Versie 5](https://github.com/xiaonanpols21/hcd/blob/main-5/public/img/readme/v-4.png)
+![Versie 5](https://github.com/xiaonanpols21/hcd/blob/main-5/public/img/readme/v-5.png)
 
-Dan wordt de data gesorteerd. Uitleg van code volgt. 
+Dan wordt de data gesorteerd. Het nummer in item.summer, is dat dicht bij het nummer van het graden van nu, laat die dan zien. 
 
 ```js
 // Sort data
-// Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#93c157f5a07b4fdcbd7058cba94dbfcd
-if (currentTemp <= 5) {
-    console.log("Het is winter tijd");
-    // Sort data for winter
-    categoryData.sort((a, b) => {
-        if (a.season === 5) return -1; // Place items with season 5 first
-        if (b.season === 5) return 1; // Place items with season other than 5 later
-        return 0; // Keep the order unchanged for other seasons
+function orderByClosest(arr, num) {
+    // temporary array holds objects with position and sort-value
+    const mapped = arr.map(function (el, i) {
+        return { index: i, value: Math.abs(el.season - num) };
     });
-} else if (currentTemp <= 10) {
-    console.log("Het is autumn tijd");
-    // Sort data for autumn
-    categoryData.sort((a, b) => {
-        if (a.season === 10) return -1; // Place items with season 10 first
-        if (b.season === 10) return 1; // Place items with season other than 10 later
-        return 0; // Keep the order unchanged for other seasons
+
+    // sorting the mapped array containing the reduced values
+    mapped.sort(function (a, b) {
+        return a.value - b.value;
     });
-} else if (currentTemp <= 15) {
-    console.log("Het is spring tijd");
-    // Sort data for spring
-    categoryData.sort((a, b) => {
-        if (a.season === 15) return -1; // Place items with season 15 first
-        if (b.season === 15) return 1; // Place items with season other than 15 later
-        return 0; // Keep the order unchanged for other seasons
-    });
-} else {
-    console.log("Het is summer tijd");
-    // Sort data for summer
-    categoryData.sort((a, b) => {
-        if (a.season === 20) return -1; // Place items with season 20 first
-        if (b.season === 20) return 1; // Place items with season other than 20 later
-        return 0; // Keep the order unchanged for other seasons
+
+    // return the resulting order
+    return mapped.map(function (el) {
+        return arr[el.index];
     });
 }
 ```
-
 
 ## Testen
 ### Prototype 1
 Ik had getest. Ze kon makkelijk door de app. Ze had niet opmerkingen wat beter kon. Wat ik zelf zie is: ze vroeg: 'Moet ik zelf weten wat matcht? Ik zo nee dat doet hij automatisch. Dus ik moet met tekst beter vertellen dat de items automatisch wordt gematcht met elkaar. 
 
 ![Versie 3](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-3.png)
+
+### Prototype 2
+Ik begon met het vertellen over vorige keer, wat ze had getest en welke feedback ik heb meegenomen voor deze test. Toen ging ik testen. Ze hoorde de verbeteringen en ging goed door de app heen. De feedback voor volgende keer is:
+
+- Meer categories toevoegen: accessoires en panty's
+- Resultaten in 1 x laten uit spreken.
+
+![Prototype 2](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/prototype-2.png)
