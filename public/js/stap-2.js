@@ -66,7 +66,7 @@ async function showNextCategoryItems(data, selectedCategory) {
 }
 
 async function showData(data, selectedItem1) {
-    const currentTemp = localStorage.getItem('currentTemp');
+    const currentTemp = Number(localStorage.getItem('currentTemp'));
 
     const combineData = [];
 
@@ -76,40 +76,11 @@ async function showData(data, selectedItem1) {
         }
     });
 
+    const sorted = orderByClosest(combineData, currentTemp);
+
     localStorage.setItem('CombineData1', JSON.stringify(combineData));
 
-    if (currentTemp <= 5) {
-        console.log("Het is winter tijd");
-
-        combineData.sort((a, b) => {
-            if (a.season === 5) return -1; 
-            if (b.season === 5) return 1; 
-            return 0; 
-        });
-    } else if (currentTemp <= 10) {
-        console.log("Het is autumn tijd");
-        combineData.sort((a, b) => {
-            if (a.season === 10) return -1; 
-            if (b.season === 10) return 1;
-            return 0; 
-        });
-    } else if (currentTemp <= 15) {
-        console.log("Het is spring tijd");
-        combineData.sort((a, b) => {
-            if (a.season === 15) return -1; 
-            if (b.season === 15) return 1; 
-            return 0; 
-        });
-    } else {
-        console.log("Het is summer tijd");
-        combineData.sort((a, b) => {
-            if (a.season === 20) return -1; 
-            if (b.season === 20) return 1; 
-            return 0; 
-        });
-    }
-
-    combineData.forEach(item => {
+    sorted.forEach(item => {
         const img = item.img;
         const description = item.description;
 
@@ -120,6 +91,23 @@ async function showData(data, selectedItem1) {
             </a>
         </li>`;
         mainUlEl.insertAdjacentHTML("beforeend", html);
+    });
+}
+
+function orderByClosest(arr, num) {
+    // temporary array holds objects with position and sort-value
+    const mapped = arr.map(function (el, i) {
+        return { index: i, value: Math.abs(el.season - num) };
+    });
+
+    // sorting the mapped array containing the reduced values
+    mapped.sort(function (a, b) {
+        return a.value - b.value;
+    });
+
+    // return the resulting order
+    return mapped.map(function (el) {
+        return arr[el.index];
     });
 }
 
