@@ -31,11 +31,7 @@ async function showData(selectedItemsArray) {
         const description = item.description;
 
         const html =
-            `<li>
-                <a href="stap-4.html" onclick="chooseItem(${item.id})">
-                    <img src="${img}" alt="${description}">
-                </a>
-            </li>`;
+            `<p>${description}</p>`;
 
         mainUlEl.insertAdjacentHTML("beforeend", html);
     });
