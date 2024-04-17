@@ -128,4 +128,7 @@ async function chooseItem(currentItemId) {
     const currentItem = categoryData.find(item => item.id === currentItemId);
 
     localStorage.setItem('selectedItem2', JSON.stringify(currentItem));
+
+    const altText = currentItem.description;
+    localStorage.setItem('altText2', JSON.stringify(altText));
 }

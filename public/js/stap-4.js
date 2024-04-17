@@ -5,9 +5,9 @@ const mainUlEl = document.querySelector("main ul");
 function getChosenItems() {
     const selectedItemsArray = [];
 
-    const selectedItem1 = localStorage.getItem('selectedItem1');
-    const selectedItem2 = localStorage.getItem('selectedItem2');
-    const selectedItem3 = localStorage.getItem('selectedItem3');
+    const selectedItem1 = localStorage.getItem('altText1');
+    const selectedItem2 = localStorage.getItem('altText2');
+    const selectedItem3 = localStorage.getItem('altText3');
 
     // Push selected items into the selectedItemsArray if they are not null
     if (selectedItem1) {
@@ -20,21 +20,18 @@ function getChosenItems() {
         selectedItemsArray.push(JSON.parse(selectedItem3));
     }
 
-    console.log(selectedItemsArray);
+    const combineString = selectedItemsArray.join(' '); 
+
+    console.log(combineString);
     return selectedItemsArray;
 }
 
+async function showData(combineString) {
 
-async function showData(selectedItemsArray) {
-    selectedItemsArray.forEach(item => {
-        const img = item.img;
-        const description = item.description;
+    const html =
+        `<p>${combineString}</p>`;
 
-        const html =
-            `<p>${description}</p>`;
-
-        mainUlEl.insertAdjacentHTML("beforeend", html);
-    });
+    mainUlEl.insertAdjacentHTML("beforeend", html);
 }
 
 
