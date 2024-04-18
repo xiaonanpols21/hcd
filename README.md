@@ -2,12 +2,6 @@
 ## Opdracht
 Petra Huidink-de Jong is de doelgroep. Zij is blind en wilt graag kleding stukken met elkaar kunnen matchen. Maar dat gaat moeilijk als de doelgroep blind is. Daarvoor is er een oplossing voor bedacht.
 
-Met een team van circa 10 personen is er een vragenlijst opgesteld om meer te weten te komen over Petra met wat haar voorkeuren zijn en wat zij handig vindt. 
-
-[Vragen lijst](https://docs.google.com/document/d/19J_38NkLhnx6Z5d7lens3TmKvPoLd499wUBorTF2mHA/edit?pli=1)
-
-Het interview is met toestemming opgenomen. 
-
 ## Concept
 ### Design
 ![Design 1](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/design-1.png)
@@ -90,6 +84,13 @@ function orderByClosest(arr, num) {
 ```
 
 ## Testen
+### Interview
+Met een team van circa 10 personen is er een vragenlijst opgesteld om meer te weten te komen over Petra met wat haar voorkeuren zijn en wat zij handig vindt. 
+
+[Vragen lijst](https://docs.google.com/document/d/19J_38NkLhnx6Z5d7lens3TmKvPoLd499wUBorTF2mHA/edit?pli=1)
+
+Het interview is met toestemming opgenomen. 
+
 ### Prototype 1
 Ik had getest. Ze kon makkelijk door de app. Ze had niet opmerkingen wat beter kon. Wat ik zelf zie is: ze vroeg: 'Moet ik zelf weten wat matcht? Ik zo nee dat doet hij automatisch. Dus ik moet met tekst beter vertellen dat de items automatisch wordt gematcht met elkaar. 
 
