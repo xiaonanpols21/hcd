@@ -2,7 +2,7 @@
 ## Inhoudsopgave
 1. [ Versies ](#vers)
 2. [ Testen ](#test)
-3. [ Design principles ](#design)
+3. [ Design principles ](#princ)
 
 ## Opdracht
 Petra Huidink-de Jong is de doelgroep. Zij is blind en wilt graag kleding stukken met elkaar kunnen matchen. Maar dat gaat moeilijk als de doelgroep blind is. Daarvoor is er een oplossing voor bedacht.
@@ -118,7 +118,7 @@ Ik begon met het vertellen over vorige keer, wat ze had getest en welke feedback
 
 ![Prototype 2](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/prototype-2.png)
 
-<a name="design"></a>
+<a name="princ"></a>
 
 ## Design principles
 ### Study situation
