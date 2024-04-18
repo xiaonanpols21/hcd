@@ -10,6 +10,8 @@ function getChosenCategory() {
         h1.textContent = "Kies een broek";
     } else if (selectedCategory === "schoenen") {
         h1.textContent = "Kies schoenen";
+    } else {
+        h1.textContent = "Kies een accessoire";
     }
 }
 getChosenCategory();

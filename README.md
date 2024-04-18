@@ -83,6 +83,11 @@ function orderByClosest(arr, num) {
 }
 ```
 
+### Versie 6
+Na de feedback van testen voor de 2e keer, is er accesoired toegevoegd en wordt de tekst in 1 p getoond waardoor het in 1 x verteld wordt door de Voice over. 
+
+![Versie 6](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-6.png)
+
 ## Testen
 ### Interview
 Met een team van circa 10 personen is er een vragenlijst opgesteld om meer te weten te komen over Petra met wat haar voorkeuren zijn en wat zij handig vindt. 
