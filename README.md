@@ -2,6 +2,7 @@
 ## Inhoudsopgave
 1. [ Versies ](#vers)
 2. [ Testen ](#test)
+3. [ Design principles ](#design)
 
 ## Opdracht
 Petra Huidink-de Jong is de doelgroep. Zij is blind en wilt graag kleding stukken met elkaar kunnen matchen. Maar dat gaat moeilijk als de doelgroep blind is. Daarvoor is er een oplossing voor bedacht.
@@ -116,3 +117,24 @@ Ik begon met het vertellen over vorige keer, wat ze had getest en welke feedback
 - Resultaten in 1 x laten uit spreken.
 
 ![Prototype 2](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/prototype-2.png)
+
+<a name="design"></a>
+
+## Design principles
+### Study situation
+Om te begrijpen wat de situatie is van de gebruiker, hebben we bij de eerste meeting met Petra een uitgebreid interview gehouden over wat zij vindt, wat zij wil en meer. 
+
+[Vragen lijst](https://docs.google.com/document/d/19J_38NkLhnx6Z5d7lens3TmKvPoLd499wUBorTF2mHA/edit?pli=1)
+
+Het interview is met toestemming opgenomen. 
+
+### Ignore conventions
+Als een normale user is het gebruikelijk om een design te hebben met titel, foto en dan een knop met dat je die wilt kiezen. Dat is wat ik in mijn eerste versie had. Ik dacht dit is goed voor een blind persoon. Tot dat ik het zelf ging testen. Toen merkte ik dat dit slecht is gemaakt en dat ik het anders moest doen.
+
+Dus in mijn volgende versie had ik alleen de img in een button gestopt waardoor, als je op de knop komt, de alt tag van de img wordt voorgelezen en gelijk kan horen wat voor product het is en dan kan je gelijk dubbel tikken om hem te selecteren. Dat scheelt behoorlijk wat stappen in vergelijking met mijn eerste ontwerp. Daar moet je nog eens swipen om hem te selecteren. 
+
+### Prioritise identitiy
+Vanuit het interview heb ik nagedacht over: Wat wilt zij? Ze vertelde dat zij niet houdt van niet duidelijke categorieën. Zoals: casual, feestelijk etc. Want iets wat ik casual vind kan zij dan weer niet casual vinden. Met die gedachten heb ik de categorieën simpel gehouden met: Broeken, Shirts, Schoenen etc.
+
+### Nonsense
+In de app is de huidige temperatuur meegenomen. Dus op de homepagina hoor je: Het is vandaag 10 graden bijvoorbeeld. Dit is iets wat je niet verwacht in de kleding app. Maar het wordt gebruikt om de kleding te sorteren op temperatuur. Hoe kan je de gebruiker dat een klein beetje laten weten? Door leuk in de app te zetten dat het vandaag zoveel graden is. 
