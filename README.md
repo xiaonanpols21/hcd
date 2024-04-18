@@ -1,4 +1,8 @@
 # HCD
+## Inhoudsopgave
+1. [ Versies ](#vers)
+2. [ Testen ](#test)
+
 ## Opdracht
 Petra Huidink-de Jong is de doelgroep. Zij is blind en wilt graag kleding stukken met elkaar kunnen matchen. Maar dat gaat moeilijk als de doelgroep blind is. Daarvoor is er een oplossing voor bedacht.
 
@@ -6,6 +10,8 @@ Petra Huidink-de Jong is de doelgroep. Zij is blind en wilt graag kleding stukke
 ### Design
 ![Design 1](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/design-1.png)
 Het idee is dat Petra kan kiezen uit deze categorieën om mee te beginnen. Dan Gaat zij naar de single categorie page en kan zij een item kiezen. Vanuit daar gaat het verder om het volgende te kiezen. 
+
+<a name="vers"></a>
 
 ## Versies
 ### Versie 1
@@ -87,6 +93,8 @@ function orderByClosest(arr, num) {
 Na de feedback van testen voor de 2e keer, is er accesoired toegevoegd en wordt de tekst in 1 p getoond waardoor het in 1 x verteld wordt door de Voice over. 
 
 ![Versie 6](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-6.png)
+
+<a name="test"></a>
 
 ## Testen
 ### Interview
