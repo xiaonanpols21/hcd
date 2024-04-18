@@ -27,7 +27,6 @@ function getChosenItems() {
 }
 
 async function showData(combineString) {
-
     const html =
         `<p>${combineString}</p>`;
 
