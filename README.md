@@ -128,13 +128,22 @@ Om te begrijpen wat de situatie is van de gebruiker, hebben we bij de eerste mee
 
 Het interview is met toestemming opgenomen. 
 
+Tijdens het testen zag ik hoe zij door de app ging waardoor ik dat mee kon nemen voor verbeteringen.
+
 ### Ignore conventions
+Petra is blind waardoor ik de volgende conventions kan negeren:
+- Kleur contrast
+- Grote text
+- Afbeeldingen scherp
+
+In eerste design heb ik de afbeelding een object-fit cover gegeven omdat het voor Petra toch niet uit maakt. Maar later dacht ik voor mezelf vind ik het wel handig dus ik had cover toch verandert naar contain. 
+
 Als een normale user is het gebruikelijk om een design te hebben met titel, foto en dan een knop met dat je die wilt kiezen. Dat is wat ik in mijn eerste versie had. Ik dacht dit is goed voor een blind persoon. Tot dat ik het zelf ging testen. Toen merkte ik dat dit slecht is gemaakt en dat ik het anders moest doen.
 
 Dus in mijn volgende versie had ik alleen de img in een button gestopt waardoor, als je op de knop komt, de alt tag van de img wordt voorgelezen en gelijk kan horen wat voor product het is en dan kan je gelijk dubbel tikken om hem te selecteren. Dat scheelt behoorlijk wat stappen in vergelijking met mijn eerste ontwerp. Daar moet je nog eens swipen om hem te selecteren. 
 
 ### Prioritise identitiy
-Vanuit het interview heb ik nagedacht over: Wat wilt zij? Ze vertelde dat zij niet houdt van niet duidelijke categorieën. Zoals: casual, feestelijk etc. Want iets wat ik casual vind kan zij dan weer niet casual vinden. Met die gedachten heb ik de categorieën simpel gehouden met: Broeken, Shirts, Schoenen etc.
+Vanuit het interview heb ik nagedacht over: Wat wilt zij? Ze vertelde dat zij niet houdt van niet duidelijke categorieën. Zoals: casual, feestelijk etc. Want iets wat ik casual vind kan zij dan weer niet casual vinden. Met die gedachten heb ik de categorieën simpel gehouden met: Broeken, Shirts, Schoenen etc. Met de tweede test zei ze dat ze graag accesoires er bij zou willen hebben. Dus die had ik ook toegevoegd. 
 
 ### Nonsense
-In de app is de huidige temperatuur meegenomen. Dus op de homepagina hoor je: Het is vandaag 10 graden bijvoorbeeld. Dit is iets wat je niet verwacht in de kleding app. Maar het wordt gebruikt om de kleding te sorteren op temperatuur. Hoe kan je de gebruiker dat een klein beetje laten weten? Door leuk in de app te zetten dat het vandaag zoveel graden is. 
+Ik dacht eerst dat vertellen hoeveel graden het was een nonsense was. Maar bij het laatste feedback gesprek kwam ik er achter dat dat toch niet zo is. Ik heb nagedacht over add nonsense. En dat is om geluid toe te voegen in de app. Als de voice over de alt text uitsptreekt dan zou er een geluidje kunnen komen. Ik zou dit graag willen toevoegen maar ik had daar niet genoeg tijd voor gehad. Ik wilde eerst dat alles werkte en dat nonsense toevoegen. 

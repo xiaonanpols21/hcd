@@ -38,11 +38,11 @@ async function showNextCategoryItems(data, selectedCategory, selectedItem1) {
 
     let foundMatch = false; // Flag to track if a match is found
 
-    for (nextCategoryItems) {
-        if (item.id === selectedItem1.combine ) {
+    // for (nextCategoryItems) {
+    //     if (item.id === selectedItem1.combine ) {
             
-        }
-    }
+    //     }
+    // }
 
     // nextCategoryItems.forEach((item) => {
     //     if (foundMatch) return; // Exit loop if match is already found
