@@ -24,11 +24,38 @@ const dataPromise = getData();
 
 // Show next category
 // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#cfcbd0cab1d64f2285f018a24560d9d4
-async function showNextCategoryItems(data, selectedCategory) {
+async function showNextCategoryItems(data, selectedCategory, selectedItem1) {
     const categories = Object.keys(data);
     const nextIndex = (categories.indexOf(selectedCategory) + 1) % categories.length;
     const nextCategory = categories[nextIndex];
     const nextCategoryItems = data[nextCategory];
+
+    console.log({selectedItem1})
+    console.log({nextCategoryItems})
+
+    const nextNextIndex = (nextIndex + 1) % categories.length;
+    const nextNextCategory = categories[nextNextIndex];
+
+    let foundMatch = false; // Flag to track if a match is found
+
+    for (nextCategoryItems) {
+        if (item.id === selectedItem1.combine ) {
+            
+        }
+    }
+
+    // nextCategoryItems.forEach((item) => {
+    //     if (foundMatch) return; // Exit loop if match is already found
+    //     item.combine.forEach((id) => {
+    //         if (id === selectedItem1.combine) {
+    //             console.log("Found a match in category: ", nextCategory);
+    //             foundMatch = true; // Set flag to true to stop further iterations
+    //             return; // Exit inner loop if match is found
+    //         } else {
+    //             console.log(`Next category who matches is ${nextNextCategory}`);
+    //         }
+    //     });
+    // });
 
     let modifiedNextCategory;
     let modifiedSelectedCategory;
@@ -42,16 +69,20 @@ async function showNextCategoryItems(data, selectedCategory) {
         modifiedNextCategory = "broek";
     } else if (nextCategory === "shirts") {
         modifiedNextCategory = "shirt";
-    } else {
+    } else if (nextCategory === "schoenen") {
         modifiedNextCategory = "schoenen";
+    } else if (nextCategory === "accessoires") {
+        modifiedNextCategory = "accessoire";
     }
 
     if (selectedCategory === "broeken") {
         modifiedSelectedCategory = "broek";
     } else if (selectedCategory === "shirts") {
         modifiedSelectedCategory = "shirt";
-    } else {
+    } else if (selectedCategory === "schoenen") {
         modifiedSelectedCategory = "schoenen";
+    } else if (selectedCategory === "jurken") {
+        modifiedSelectedCategory = "jurk";
     }
 
     if (modifiedSelectedCategory === "shirt") {
@@ -115,7 +146,7 @@ async function initialize() {
     const selectedItem1 = await getChosenCategory(); 
     const selectedCategory = localStorage.getItem('selectedCategory'); 
     const data = await dataPromise; 
-    const nextCategoryItems = await showNextCategoryItems(data, selectedCategory);
+    const nextCategoryItems = await showNextCategoryItems(data, selectedCategory, selectedItem1);
 
     showData(nextCategoryItems, selectedItem1);
 }
