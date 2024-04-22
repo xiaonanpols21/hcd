@@ -22,7 +22,7 @@ async function getData() {
 }
 const dataPromise = getData(); 
 
-async function showNextCategoryItems(data, selectedCategory) {
+async function showNextCategoryItems(data, selectedCategory, selectedItem3) {
     const categories = Object.keys(data);
     const nextIndex = (categories.indexOf(selectedCategory) + 1) % categories.length;
     const nextCategory = categories[nextIndex];
@@ -38,8 +38,10 @@ async function showNextCategoryItems(data, selectedCategory) {
         modifiedNextCategory = "broek";
     } else if (nextCategory === "shirts") {
         modifiedNextCategory = "shirt";
-    } else {
+    } else if (nextCategory === "schoenen") {
         modifiedNextCategory = "schoenen";
+    } else {
+        modifiedNextCategory = "jurk";
     }
 
     if (selectedCategory === "broeken") {
@@ -111,7 +113,7 @@ async function initialize() {
     const selectedItem3 = getChosenCategory(); // Retrieve selected shirts array
     const selectedCategory = localStorage.getItem('selectedCategory3'); 
     const data = await dataPromise; // Fetch data
-    const nextCategoryItems = await showNextCategoryItems(data, selectedCategory);
+    const nextCategoryItems = await showNextCategoryItems(data, selectedCategory, selectedItem3);
     
     showData(nextCategoryItems, selectedItem3);
 }

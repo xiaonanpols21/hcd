@@ -65,7 +65,6 @@ async function showNextCategoryItems(data, selectedCategory, selectedItem1) {
                 nextCategoryItems = data[nextCategory];
             }
         }
-
     }
 
     let modifiedNextCategory;
