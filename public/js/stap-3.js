@@ -28,6 +28,16 @@ async function showNextCategoryItems(data, selectedCategory) {
     const nextCategory = categories[nextIndex];
     const nextCategoryItems = data[nextCategory];
 
+    const selectedCategory3 = localStorage.getItem('selectedCategory3');
+
+    console.log(selectedCategory3)
+
+    if (selectedCategory3 === "jurken") {
+        window.location.pathname = "../../stap-6.html";
+    }
+
+    console.log(data)
+
     let modifiedNextCategory;
     let modifiedSelectedCategory;
     let vorigeOrVorig;

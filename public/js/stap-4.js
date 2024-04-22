@@ -24,13 +24,28 @@ const dataPromise = getData();
 
 async function showNextCategoryItems(data, selectedCategory, selectedItem3) {
     const categories = Object.keys(data);
-    const nextIndex = (categories.indexOf(selectedCategory) + 1) % categories.length;
-    const nextCategory = categories[nextIndex];
-    const nextCategoryItems = data[nextCategory];
+
+    let nextIndex = (categories.indexOf(selectedCategory) + 1) % categories.length;
+    let nextCategory = categories[nextIndex];
+    let nextCategoryItems = data[nextCategory];
+
+    console.log(nextCategory)
 
     let modifiedNextCategory;
     let modifiedSelectedCategory;
     let vorigeOrVorig;
+
+    const matches = nextCategoryItems.filter(item => {
+        return item.combine.includes(selectedItem3.id) 
+    })
+
+    console.log({matches})
+
+    if (nextCategory = "jurken") {
+        nextIndex = (categories.indexOf(selectedCategory) + 2) % categories.length;
+        nextCategory = categories[nextIndex];
+        nextCategoryItems = data[nextCategory];
+    }
 
     localStorage.setItem('selectedCategory4', nextCategory);
 
