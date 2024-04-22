@@ -28,10 +28,46 @@ async function showNextCategoryItems(data, selectedCategory, selectedItem3) {
     const nextCategory = categories[nextIndex];
     const nextCategoryItems = data[nextCategory];
 
-    const selectedCategory5 = localStorage.getItem('selectedCategory5');
+    console.log(selectedCategory)
 
-    if (selectedCategory5 === "jurken") {
-        window.location.pathname = "stap-6.html";
+    if (selectedCategory === "schoenen") {
+        function getChosenItems() {
+            const selectedItemsArray = [];
+        
+            const selectedItem1 = localStorage.getItem('altText1');
+            const selectedItem2 = localStorage.getItem('altText2');
+            const selectedItem3 = localStorage.getItem('altText3');
+        
+            // Push selected items into the selectedItemsArray if they are not null
+            if (selectedItem1) {
+                selectedItemsArray.push(JSON.parse(selectedItem1));
+            }
+            if (selectedItem2) {
+                selectedItemsArray.push(JSON.parse(selectedItem2));
+            }
+            if (selectedItem3) {
+                selectedItemsArray.push(JSON.parse(selectedItem3));
+            }
+        
+            const combineString = selectedItemsArray.join(' '); 
+        
+            console.log(combineString);
+            return selectedItemsArray;
+        }
+        
+        async function showData(combineString) {
+            const html =
+                `<p>${combineString}</p>`;
+        
+            mainUlEl.insertAdjacentHTML("beforeend", html);
+        }
+        
+        
+        const selectedItemsArray = getChosenItems();
+        
+        showData(selectedItemsArray);
+
+        
     }
 
 
@@ -67,6 +103,10 @@ async function showNextCategoryItems(data, selectedCategory, selectedItem3) {
 
     h1.textContent = `Kies bijbehorende ${modifiedNextCategory} bij ${vorigeOrVorig} ${modifiedSelectedCategory}`;
     
+    if (selectedCategory === "schoenen") {
+        h1.textContent = "Mijn resultaten"
+    }
+
     return nextCategoryItems;
 }
 
@@ -121,8 +161,11 @@ async function initialize() {
     const selectedCategory = localStorage.getItem('selectedCategory3'); 
     const data = await dataPromise; // Fetch data
     const nextCategoryItems = await showNextCategoryItems(data, selectedCategory, selectedItem3);
-    
-    showData(nextCategoryItems, selectedItem3);
+
+
+    if (!selectedCategory === "schoenen") {
+        showData(nextCategoryItems, selectedItem3);
+    }
 }
 initialize();
 
