@@ -26,36 +26,47 @@ const dataPromise = getData();
 // Zie prompts: https://chemical-bunny-323.notion.site/HCD-Chat-gpt-Doc-76ba691317274604955fcc03b75bc8ea#cfcbd0cab1d64f2285f018a24560d9d4
 async function showNextCategoryItems(data, selectedCategory, selectedItem1) {
     const categories = Object.keys(data);
-    const nextIndex = (categories.indexOf(selectedCategory) + 1) % categories.length;
-    const nextCategory = categories[nextIndex];
-    const nextCategoryItems = data[nextCategory];
+
+    let nextIndex = (categories.indexOf(selectedCategory) + 1) % categories.length;
+    let nextCategory = categories[nextIndex];
+    let nextCategoryItems = data[nextCategory];
 
     console.log({selectedItem1})
+    console.log({nextCategory})
     console.log({nextCategoryItems})
 
-    const nextNextIndex = (nextIndex + 1) % categories.length;
-    const nextNextCategory = categories[nextNextIndex];
+    const matches = nextCategoryItems.filter(item => {
+        return item.combine.includes(selectedItem1.id) 
+    })
 
-    let foundMatch = false; // Flag to track if a match is found
+    console.log({matches})
 
-    // for (nextCategoryItems) {
-    //     if (item.id === selectedItem1.combine ) {
+    if (!matches.length) {
+        nextIndex = (categories.indexOf(selectedCategory) + 2) % categories.length;
+        nextCategory = categories[nextIndex];
+        nextCategoryItems = data[nextCategory];
+        
+        const matches = nextCategoryItems.filter(item => {
+            return item.combine.includes(selectedItem1.id) 
+        })
+        if (!matches.length) {
+            console.log('gets here');
+            nextIndex = (categories.indexOf(selectedCategory) + 3) % categories.length;
+            nextCategory = categories[nextIndex];
+            nextCategoryItems = data[nextCategory];
             
-    //     }
-    // }
+            const matches = nextCategoryItems.filter(item => {
+                return item.combine.includes(selectedItem1.id) 
+            })
+            if (!matches.length) {
+                console.log('gets here');
+                nextIndex = (categories.indexOf(selectedCategory) + 4) % categories.length;
+                nextCategory = categories[nextIndex];
+                nextCategoryItems = data[nextCategory];
+            }
+        }
 
-    // nextCategoryItems.forEach((item) => {
-    //     if (foundMatch) return; // Exit loop if match is already found
-    //     item.combine.forEach((id) => {
-    //         if (id === selectedItem1.combine) {
-    //             console.log("Found a match in category: ", nextCategory);
-    //             foundMatch = true; // Set flag to true to stop further iterations
-    //             return; // Exit inner loop if match is found
-    //         } else {
-    //             console.log(`Next category who matches is ${nextNextCategory}`);
-    //         }
-    //     });
-    // });
+    }
 
     let modifiedNextCategory;
     let modifiedSelectedCategory;
@@ -96,9 +107,10 @@ async function showNextCategoryItems(data, selectedCategory, selectedItem1) {
     return nextCategoryItems;
 }
 
+
+
 async function showData(data, selectedItem1) {
     const currentTemp = Number(localStorage.getItem('currentTemp'));
-
     const combineData = [];
 
     data.forEach(item => {
@@ -108,7 +120,6 @@ async function showData(data, selectedItem1) {
     });
 
     const sorted = orderByClosest(combineData, currentTemp);
-
     localStorage.setItem('CombineData1', JSON.stringify(combineData));
 
     sorted.forEach(item => {
@@ -124,6 +135,8 @@ async function showData(data, selectedItem1) {
         mainUlEl.insertAdjacentHTML("beforeend", html);
     });
 }
+
+
 
 function orderByClosest(arr, num) {
     // temporary array holds objects with position and sort-value
