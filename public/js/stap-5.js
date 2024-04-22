@@ -31,7 +31,7 @@ async function showNextCategoryItems(data, selectedCategory, selectedItem3) {
     const selectedCategory5 = localStorage.getItem('selectedCategory5');
 
     if (selectedCategory5 === "jurken") {
-        window.location.pathname = "../../stap-6.html";
+        window.location.pathname = "stap-6.html";
     }
 
 

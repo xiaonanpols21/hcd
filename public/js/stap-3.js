@@ -33,7 +33,7 @@ async function showNextCategoryItems(data, selectedCategory) {
     console.log(selectedCategory3)
 
     if (selectedCategory3 === "jurken") {
-        window.location.pathname = "../../stap-6.html";
+        window.location.pathname = "stap-6.html";
     }
 
     console.log(data)
