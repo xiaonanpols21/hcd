@@ -129,33 +129,6 @@
 
     ],
 
-    "jurken": [
-        {
-            "id": 19,
-            "name": "Jurk 'Mette'",
-            "description": "Rode v hals, effen jurk. Kwart lengte gepofte mouwen. Er zit een slief in de rok met aan het uit einde rafels. Die slief begint bij de taille aan de linker kant en gaat helemaal naar het uit einde in het midden. Uit einde van de rok heeft ook rafels. Lengte: 7 / 8. Pasvorm: normaal. Je kan deze jurk over je hoofd heen doen om hem aan te doen.",
-            "img": "public/img/data/jurk-1.jpg",
-            "season": 10,
-            "combine": [16, 7, 8, 14, 15]
-        },
-        {
-            "id": 20,
-            "name": "Jurk 'Lani'",
-            "description": "Turquoise mouwloze jurk.  Ronde kraag van 3 centimeter. Bij de taille is er een band van 3 centimeter. Op die band is er een patroon van zilveren bladeren horizontaal. De bladeren zijn horizontaal naar links weer gegeven. 1 blad aan elke kant die zijn weg volgt naar links. Tussen de bladeren aan de binnen kant zijn zilveren balletjes van 2 millimeter opgemaakt. Lengte: knielengte. Pasvorm: normaal.  Sluiting: rits.",
-            "img": "public/img/data/jurk-2.jpg",
-            "season": 15,
-            "combine": [16, 7, 14]
-        },
-        {
-            "id": 21,
-            "name": "Cocktailjurk 'Raquel'",
-            "description": "Witte kort mini mouwloze jurk. Deze jurk heft een rechte lijn bij de borst. De jurk bevat een witte sjaal van 6 centimeter brede band. Bij de nek is er een bloem geplaatst van dezelfde stof. De jurk is strak bij de borst en loopt een beetje uit bij de taille. Pavorm: slank. Sluiting: rits.",
-            "img": "public/img/data/jurk-3.jpg",
-            "season": 15,
-            "combine": [16, 17, 7, 8, 15]
-        }
-    ],
-
     "accessoires": [
         {
             "id": 16,

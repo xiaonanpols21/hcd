@@ -35,39 +35,6 @@ async function showNextCategoryItems(data, selectedCategory, selectedItem1) {
     console.log({nextCategory})
     console.log({nextCategoryItems})
 
-    const matches = nextCategoryItems.filter(item => {
-        return item.combine.includes(selectedItem1.id) 
-    })
-
-    console.log({matches})
-
-    if (!matches.length) {
-        nextIndex = (categories.indexOf(selectedCategory) + 2) % categories.length;
-        nextCategory = categories[nextIndex];
-        nextCategoryItems = data[nextCategory];
-        
-        const matches = nextCategoryItems.filter(item => {
-            return item.combine.includes(selectedItem1.id) 
-        })
-        if (!matches.length) {
-            console.log('gets here');
-            nextIndex = (categories.indexOf(selectedCategory) + 3) % categories.length;
-            nextCategory = categories[nextIndex];
-            nextCategoryItems = data[nextCategory];
-            
-            const matches = nextCategoryItems.filter(item => {
-                return item.combine.includes(selectedItem1.id) 
-            })
-            if (!matches.length) {
-                console.log('gets here');
-                nextIndex = (categories.indexOf(selectedCategory) + 4) % categories.length;
-                nextCategory = categories[nextIndex];
-                nextCategoryItems = data[nextCategory];
-            }
-        }
-
-    }
-
     let modifiedNextCategory;
     let modifiedSelectedCategory;
     let vorigeOrVorig;
