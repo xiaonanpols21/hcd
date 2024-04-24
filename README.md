@@ -169,6 +169,13 @@ De feedback van Petra is: bij Mijn resultaten, voeg niet nog een keer die uitgeb
 
 Wat ik verder nog had ontdekt is wanneer Stephan ging testen, hoorde ik dat hij wanneer hij resultaten had bij shirts, dat er eerst wordt gezegd: Er zijn 3 items bijvoorbeeld. Dus Petra kan dan weten hoeveel artikelen er zijn. Dat is nog iets goeds om toe te voegen. Want Petra swipet gewoon door de artikelen heen totdat zij terug knop hoort van iPhone. Dus dat is nog een goede toevoeging voor in de toekomst.
 
+Wat ik zou toevoegen voor in de toekomst:
+
+- Verkleinerde beschrijving bij Mijn resultaten
+- Aantal resultaten
+- Nonsense: Geluid toevoegen
+- Artikelen toevoegen aan de data
+
 <a name="princ"></a>
 
 ## Design principles
