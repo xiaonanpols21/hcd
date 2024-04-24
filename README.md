@@ -157,6 +157,18 @@ Ik begon met het vertellen over vorige keer, wat ze had getest en welke feedback
 
 ![Prototype 2](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/prototype-2.png)
 
+### Prototype 3
+Met het laatste keer testen, vertelde ik de feedback van vorige keer en dat ik het heb toegepast. Ik gaf Petra 2 opdrachten. 
+
+- Kies een shirt en volg de stappen waar accesoires bij is toegevoegd.
+- Kies een jurk en volg de stappen. 
+
+Het testen ging goed. Het ging wel een beetje mis met de data op het laatste bij mijn resultaten. Mijn resultaten komt pas als er iets gemet. Dus hij moet wachten. Soms gaat het goed, soms niet. Dus als ik even refresh dan gaat het goed. 
+
+De feedback van Petra is: bij Mijn resultaten, voeg niet nog een keer die uitgebreide beschrijving toe. Bij het kiezen van de artikelen wel maar daar hoeft het niet. Dat is iets wat ik zou gaan toevoegen als ik meer tijd had. 
+
+Wat ik verder nog had ontdekt is wanneer Stephan ging testen, hoorde ik dat hij wanneer hij resultaten had bij shirts, dat er eerst wordt gezegd: Er zijn 3 items bijvoorbeeld. Dus Petra kan dan weten hoeveel artikelen er zijn. Dat is nog iets goeds om toe te voegen. Want Petra swipet gewoon door de artikelen heen totdat zij terug knop hoort van iPhone. Dus dat is nog een goede toevoeging voor in de toekomst.
+
 <a name="princ"></a>
 
 ## Design principles
