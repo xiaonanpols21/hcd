@@ -95,6 +95,45 @@ Na de feedback van testen voor de 2e keer, is er accesoired toegevoegd en wordt 
 
 ![Versie 6](https://github.com/xiaonanpols21/hcd/blob/main/public/img/readme/v-6.png)
 
+### Versie 7
+In de app is er ook een aparte categorie toegevoegd. Jurken. Je gaat geen jurk matchen met een shirt. Nu heb ik gedaan: als je jurken kiest als eerste categorie en je gaat naar de volgende categorie bijvoorbeeld shirts, en daar is geen match ga dan naar de volgende categorie totdat je een match vindt. 
+
+Dan heb ik ook gedaan met de shirts bijvoorbeeld, als de eerste keuze shirt is, sla dan jurken over en ga naar de volgende categorie. 
+
+```js
+const matches = nextCategoryItems.filter(item => {
+    return item.combine.includes(selectedItem1.id) 
+})
+
+if (!matches.length) {
+    nextIndex = (categories.indexOf(selectedCategory) + 2) % categories.length;
+    nextCategory = categories[nextIndex];
+    nextCategoryItems = data[nextCategory];
+        
+    const matches = nextCategoryItems.filter(item => {
+        return item.combine.includes(selectedItem1.id) 
+    })
+
+    if (!matches.length) {
+        console.log('gets here');
+        nextIndex = (categories.indexOf(selectedCategory) + 3) % categories.length;
+        nextCategory = categories[nextIndex];
+        nextCategoryItems = data[nextCategory];
+            
+        const matches = nextCategoryItems.filter(item => {
+            return item.combine.includes(selectedItem1.id) 
+        })
+
+        if (!matches.length) {
+            console.log('gets here');
+            nextIndex = (categories.indexOf(selectedCategory) + 4) % categories.length;
+            nextCategory = categories[nextIndex];
+            nextCategoryItems = data[nextCategory];
+        }
+        }
+    }
+```
+
 <a name="test"></a>
 
 ## Testen
